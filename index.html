@@ -11,56 +11,83 @@
   <title>はじめてのAI塾 | AIで副業を自動化して月42万円を実現</title>
   <link rel="stylesheet" href="style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;700;800;900&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
+  <!-- スクロールプログレスバー -->
+  <div class="progress-bar" id="progressBar"></div>
+
+  <!-- 緊急性バナー -->
+  <div class="urgency-banner">
+    <span class="urgency-icon">⏰</span>
+    <strong>先着100名限定：</strong>LINE登録で「AIテンプレート集」を無料プレゼント中
+    <a href="https://lin.ee/7TgLoCi" target="_blank" class="urgency-btn">今すぐ受け取る →</a>
+  </div>
+
   <!-- ヘッダー -->
-  <header class="header">
+  <header class="header" id="header">
     <div class="container">
       <div class="header-inner">
         <a href="#" class="logo">🎓 はじめてのAI塾</a>
-        <nav class="nav">
+        <nav class="nav" id="nav">
           <a href="#about">プロフィール</a>
           <a href="#articles">記事一覧</a>
           <a href="#tools">おすすめツール</a>
-          <a href="https://lin.ee/7TgLoCi" target="_blank" class="nav-cta">LINE登録（無料）</a>
+          <a href="#faq">よくある質問</a>
+          <a href="https://lin.ee/7TgLoCi" target="_blank" class="nav-cta">📩 LINE登録（無料）</a>
         </nav>
+        <button class="hamburger" id="hamburger" aria-label="メニュー">
+          <span></span><span></span><span></span>
+        </button>
       </div>
     </div>
   </header>
 
+  <!-- モバイルメニュー -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#about" class="mobile-menu-link">プロフィール</a>
+    <a href="#articles" class="mobile-menu-link">記事一覧</a>
+    <a href="#tools" class="mobile-menu-link">おすすめツール</a>
+    <a href="#faq" class="mobile-menu-link">よくある質問</a>
+    <a href="https://lin.ee/7TgLoCi" target="_blank" class="mobile-menu-cta">📩 LINE登録（無料）</a>
+  </div>
+
   <!-- ヒーローセクション -->
   <section class="hero">
     <div class="container">
-      <div class="hero-badge">🔥 4日でメルマガ700件獲得の実績</div>
+      <div class="hero-badge">✨ 初心者でも始められるAI副業の全手順を公開中</div>
       <h1 class="hero-title">
-        「AI副業って<br>難しそう…」<br>
+        「AI副業って難しそう…」<br>
         <span class="highlight">その思い込みを壊します。</span>
       </h1>
       <p class="hero-sub">
         8種類の副業で失敗し、自己投資30万円を溶かした私が<br>
-        AIに出会って<strong>たった3ヶ月で月42万円</strong>を達成した方法を、<br>
+        AIに出会って<strong>たった3ヶ月で月42万円</strong>を達成した方法を<br>
         初心者にもわかるように全部公開します。
       </p>
+
       <div class="hero-stats">
         <div class="stat">
           <span class="stat-num">42<small>万円</small></span>
           <span class="stat-label">月収実績</span>
         </div>
+        <div class="stat-divider"></div>
         <div class="stat">
           <span class="stat-num">700<small>件</small></span>
           <span class="stat-label">4日でリスト獲得</span>
         </div>
+        <div class="stat-divider"></div>
         <div class="stat">
           <span class="stat-num">3<small>ヶ月</small></span>
           <span class="stat-label">で結果が出た</span>
         </div>
       </div>
-      <a href="https://lin.ee/7TgLoCi" target="_blank" class="btn-primary">
+
+      <a href="https://lin.ee/7TgLoCi" target="_blank" class="btn-line-hero">
         📩 無料AIテンプレートを受け取る（LINE登録）
       </a>
-      <p class="hero-note">※ 登録無料・いつでも解除できます</p>
+      <p class="hero-note">登録無料・スパムなし・いつでも解除できます</p>
     </div>
   </section>
 
@@ -70,33 +97,45 @@
       <h2 class="section-title">こんな悩み、ありませんか？</h2>
       <div class="problem-grid">
         <div class="problem-item">
-          <span class="problem-icon">😔</span>
+          <div class="problem-icon-wrap">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          </div>
           <p>AIツールを使っているのに、全然稼げない</p>
         </div>
         <div class="problem-item">
-          <span class="problem-icon">😴</span>
+          <div class="problem-icon-wrap">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
           <p>毎日SNSに投稿するのが続かない</p>
         </div>
         <div class="problem-item">
-          <span class="problem-icon">😰</span>
+          <div class="problem-icon-wrap">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+          </div>
           <p>副業を始めたいけど何から手をつければいいかわからない</p>
         </div>
         <div class="problem-item">
-          <span class="problem-icon">😤</span>
+          <div class="problem-icon-wrap">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+          </div>
           <p>フォロワーが増えず、リストも取れない</p>
         </div>
         <div class="problem-item">
-          <span class="problem-icon">💸</span>
+          <div class="problem-icon-wrap">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+          </div>
           <p>情報商材にお金を使ったけど稼げなかった</p>
         </div>
         <div class="problem-item">
-          <span class="problem-icon">⏰</span>
+          <div class="problem-icon-wrap">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
           <p>本業・家事・育児が忙しく作業時間が取れない</p>
         </div>
       </div>
       <div class="problem-answer">
-        <p>それ、<strong>全部解決できます。</strong></p>
-        <p>必要なのは「正しい仕組み」だけです。</p>
+        <p class="problem-answer-main">それ、<strong>全部解決できます。</strong></p>
+        <p class="problem-answer-sub">必要なのは「正しい仕組み」を知ることだけです。</p>
       </div>
     </div>
   </section>
@@ -106,47 +145,65 @@
     <div class="container">
       <h2 class="section-title">プロフィール</h2>
       <div class="about-inner">
-        <div class="about-avatar">
-          <div class="avatar-placeholder">GOT'EM<br>きたの</div>
+        <div class="about-left">
+          <!-- 実際の写真に差し替える場合：<img src="photo.jpg" alt="GOT'EMきたの" class="about-photo"> -->
+          <div class="about-photo-placeholder">
+            <div class="photo-inner">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+              <p>GOT'EM<br>きたの</p>
+            </div>
+          </div>
+          <div class="about-achievements">
+            <div class="achievement">
+              <span class="ach-num">42万円</span>
+              <span class="ach-label">月収実績</span>
+            </div>
+            <div class="achievement">
+              <span class="ach-num">700件</span>
+              <span class="ach-label">4日でリスト獲得</span>
+            </div>
+            <div class="achievement">
+              <span class="ach-num">3ヶ月</span>
+              <span class="ach-label">で結果が出た</span>
+            </div>
+          </div>
         </div>
         <div class="about-content">
           <h3>GOT'EMきたの</h3>
-          <p class="about-catch">「副業8種類失敗→AI自動化で月42万円」を実現した人</p>
+          <p class="about-catch">「副業8種類失敗→AI自動化で月42万円」を実現</p>
           <div class="timeline">
-            <div class="timeline-item bad">
-              <span class="tl-icon">✗</span>
-              <div>
-                <strong>〜2年前</strong>
-                <p>副業を8種類試すも全て失敗。自己投資約30万円を使い、収益はほぼゼロ。</p>
+            <div class="timeline-item fail">
+              <div class="tl-dot"></div>
+              <div class="tl-body">
+                <strong>〜2年前：副業難民時代</strong>
+                <p>ブログ・アフィリエイト・物販など8種類を試すも全て失敗。自己投資約30万円を使い、収益はほぼゼロ。家族に内緒でカードで払っていた時期も。</p>
               </div>
             </div>
-            <div class="timeline-item">
-              <span class="tl-icon">💡</span>
-              <div>
-                <strong>AIとの出会い</strong>
-                <p>Claude Codeに出会い、Threadsの完全自動化システムを構築。</p>
+            <div class="timeline-item turn">
+              <div class="tl-dot"></div>
+              <div class="tl-body">
+                <strong>転機：AIとの出会い</strong>
+                <p>「AIを使えば作業が10分の1になる」という言葉を信じ、Claude Codeを使ったThreads完全自動化システムを構築。</p>
               </div>
             </div>
-            <div class="timeline-item good">
-              <span class="tl-icon">🚀</span>
-              <div>
-                <strong>4日後</strong>
-                <p>メルマガ・LINEリスト700件を獲得。</p>
+            <div class="timeline-item success">
+              <div class="tl-dot"></div>
+              <div class="tl-body">
+                <strong>4日後：リスト700件獲得</strong>
+                <p>自動化システム稼働後、4日間でLINE・メルマガリスト700件を達成。</p>
               </div>
             </div>
-            <div class="timeline-item good">
-              <span class="tl-icon">💰</span>
-              <div>
-                <strong>3ヶ月後</strong>
-                <p>月42万円の副業収益を達成。現在も自動化システムが稼働中。</p>
+            <div class="timeline-item success">
+              <div class="tl-dot"></div>
+              <div class="tl-body">
+                <strong>3ヶ月後：月42万円達成</strong>
+                <p>note販売・LINEステップ配信・ASPアフィリエイトの複合収益モデルで月42万円を突破。現在も自動化システムが稼働中。</p>
               </div>
             </div>
           </div>
-          <p class="about-message">
-            特別なスキルも才能もありません。<br>
-            私が変えたのは「手動でやること」をやめただけです。<br>
-            同じ悩みを持つあなたにも、同じことができます。
-          </p>
+          <div class="about-message">
+            <p>特別なスキルも才能もありません。私が変えたのは「手動でやること」をやめただけです。同じ悩みを持つあなたにも、同じことができます。</p>
+          </div>
         </div>
       </div>
     </div>
@@ -202,7 +259,7 @@
         <article class="article-card">
           <div class="article-category">Claude Code</div>
           <h3>毎回同じ設定を手打ちしていた私が、Claude Code Skillsで初期セットアップを"呪文1つ"に変えた話</h3>
-          <p class="article-desc">Claude Codeの隠れた神機能「Skills」で、作業効率が劇的に変わった方法を公開。</p>
+          <p class="article-desc">Claude Codeの神機能「Skills」で作業効率が劇的に変わった方法を公開。</p>
           <div class="article-footer">
             <span class="article-price free">無料</span>
             <a href="https://note.com/gaddemukitano/n/n34109bf84359" target="_blank" class="article-btn">noteで読む →</a>
@@ -221,33 +278,31 @@
 
       </div>
       <div class="articles-more">
-        <a href="https://note.com/gaddemukitano" target="_blank" class="btn-secondary">すべての記事をnoteで見る →</a>
+        <a href="https://note.com/gaddemukitano" target="_blank" class="btn-outline">すべての記事をnoteで見る →</a>
       </div>
     </div>
   </section>
 
-  <!-- おすすめツールセクション（アフィリエイト） -->
+  <!-- おすすめツールセクション -->
   <section class="tools" id="tools">
     <div class="container">
       <h2 class="section-title">私が実際に使っているツール</h2>
-      <p class="section-sub">月42万円の自動化システムを支える厳選ツールです</p>
+      <p class="section-sub">月42万円の自動化システムを支える厳選6ツール</p>
       <div class="tools-grid">
 
         <div class="tool-card">
           <div class="tool-icon">🤖</div>
           <h3>Claude（Anthropic）</h3>
           <p class="tool-tag">AI自動化の核心</p>
-          <p>Threads投稿の自動生成・6エージェント構成の要。ChatGPTより長文生成と指示理解が優秀。</p>
-          <div class="tool-rating">★★★★★</div>
+          <p>Threads投稿の自動生成・6エージェント構成の要。長文生成と指示理解がChatGPTより優秀で、毎日使っています。</p>
           <a href="https://claude.ai" target="_blank" class="tool-btn">無料で試す →</a>
         </div>
 
         <div class="tool-card">
-          <div class="tool-icon">📱</div>
+          <div class="tool-icon">💬</div>
           <h3>LINE公式アカウント</h3>
           <p class="tool-tag">リスト構築の最強ツール</p>
-          <p>開封率50%超。メルマガの2倍の反応率。無料プランでも月1,000通まで送れる。</p>
-          <div class="tool-rating">★★★★★</div>
+          <p>開封率50%超でメルマガの2倍の反応率。無料プランで月1,000通まで送れるため、収益が出るまでコストゼロで運用できます。</p>
           <a href="https://www.linebiz.com/jp/entry/" target="_blank" class="tool-btn">無料で開設 →</a>
         </div>
 
@@ -255,8 +310,7 @@
           <div class="tool-icon">📝</div>
           <h3>note</h3>
           <p class="tool-tag">コンテンツ販売プラットフォーム</p>
-          <p>初期費用ゼロで有料記事を販売できる。手数料は売上の15%のみ。今すぐ始められる。</p>
-          <div class="tool-rating">★★★★☆</div>
+          <p>初期費用ゼロで有料記事を販売できます。手数料は売上の15%のみ。審査なしで今日から販売を始められます。</p>
           <a href="https://note.com" target="_blank" class="tool-btn">無料で始める →</a>
         </div>
 
@@ -264,8 +318,7 @@
           <div class="tool-icon">🎨</div>
           <h3>Canva</h3>
           <p class="tool-tag">サムネイル・画像作成</p>
-          <p>SNSのサムネイル、noteのヘッダー画像を5分で作れる。無料プランで十分使える。</p>
-          <div class="tool-rating">★★★★☆</div>
+          <p>SNSのサムネイル、noteのヘッダー画像を5分で作れます。テンプレートが豊富で、デザイン経験がなくてもプロ品質に仕上がります。</p>
           <a href="https://www.canva.com/ja_jp/" target="_blank" class="tool-btn">無料で試す →</a>
         </div>
 
@@ -273,8 +326,7 @@
           <div class="tool-icon">📊</div>
           <h3>A8.net</h3>
           <p class="tool-tag">ASPアフィリエイト</p>
-          <p>国内最大のASP。AIスクール・副業系の案件が豊富。審査が通りやすく初心者に最適。</p>
-          <div class="tool-rating">★★★★★</div>
+          <p>国内最大のASP。AIスクール・副業系の案件が豊富で、審査が通りやすく初心者にも最適です。私も最初に登録したASPです。</p>
           <a href="https://www.a8.net" target="_blank" class="tool-btn">無料登録 →</a>
         </div>
 
@@ -282,8 +334,7 @@
           <div class="tool-icon">💻</div>
           <h3>Claude Code</h3>
           <p class="tool-tag">AI自動化の最前線</p>
-          <p>Threadsの完全自動化を実現したツール。プログラミング不要でAIエージェントを構築できる。</p>
-          <div class="tool-rating">★★★★★</div>
+          <p>Threadsの完全自動化を実現したツール。プログラミング知識がなくてもAIエージェントを組み合わせた自動化システムを構築できます。</p>
           <a href="https://claude.ai/code" target="_blank" class="tool-btn">詳細を見る →</a>
         </div>
 
@@ -295,55 +346,80 @@
   <section class="line-cta" id="line">
     <div class="container">
       <div class="line-inner">
-        <div class="line-badge">🎁 無料プレゼント</div>
-        <h2>今すぐLINE登録で<br><span class="highlight">コピペで使えるAIテンプレート集</span><br>を無料プレゼント</h2>
+        <div class="line-badge">🎁 先着100名限定・無料プレゼント</div>
+        <h2>今すぐLINE登録で<br><span class="line-highlight">コピペで使えるAIテンプレート集</span><br>を無料プレゼント</h2>
         <div class="line-benefits">
           <div class="benefit">
-            <span class="benefit-icon">✅</span>
+            <div class="benefit-check">✓</div>
             <p><strong>AIテンプレート3種</strong>をすぐ使える形で配布</p>
           </div>
           <div class="benefit">
-            <span class="benefit-icon">✅</span>
+            <div class="benefit-check">✓</div>
             <p><strong>7日間のステップ配信</strong>でAI副業の全体像がわかる</p>
           </div>
           <div class="benefit">
-            <span class="benefit-icon">✅</span>
+            <div class="benefit-check">✓</div>
             <p><strong>無料セミナー</strong>の先行案内を受け取れる</p>
           </div>
           <div class="benefit">
-            <span class="benefit-icon">✅</span>
+            <div class="benefit-check">✓</div>
             <p><strong>月42万円を生み出した仕組み</strong>の裏側を公開</p>
           </div>
         </div>
-        <a href="https://lin.ee/7TgLoCi" target="_blank" class="btn-line">
+        <a href="https://lin.ee/7TgLoCi" target="_blank" class="btn-line-main">
           📩 LINEで無料登録する
         </a>
-        <p class="line-note">※ 登録無料・スパムは一切送りません・いつでも解除できます</p>
+        <p class="line-note">登録無料・スパムは一切送りません・いつでも解除できます</p>
       </div>
     </div>
   </section>
 
   <!-- よくある質問 -->
-  <section class="faq">
+  <section class="faq" id="faq">
     <div class="container">
       <h2 class="section-title">よくある質問</h2>
       <div class="faq-list">
         <div class="faq-item">
-          <div class="faq-q">Q. プログラミングの知識がなくても大丈夫ですか？</div>
-          <div class="faq-a">A. まったく問題ありません。このサイトで紹介する方法は、プログラミング不要・スマホだけでも実践できるものを中心に解説しています。</div>
+          <button class="faq-q" onclick="toggleFaq(this)">
+            <span>Q. プログラミングの知識がなくても大丈夫ですか？</span>
+            <span class="faq-arrow">▼</span>
+          </button>
+          <div class="faq-a">まったく問題ありません。このサイトで紹介する方法は、プログラミング不要・スマホだけでも実践できるものを中心に解説しています。実際に私自身、コードを書けない状態からスタートしました。</div>
         </div>
         <div class="faq-item">
-          <div class="faq-q">Q. 初期費用はどのくらいかかりますか？</div>
-          <div class="faq-a">A. ゼロ円から始められます。紹介しているツールはすべて無料プランからスタートできます。収益が出てから有料プランに切り替えることをおすすめします。</div>
+          <button class="faq-q" onclick="toggleFaq(this)">
+            <span>Q. 初期費用はどのくらいかかりますか？</span>
+            <span class="faq-arrow">▼</span>
+          </button>
+          <div class="faq-a">ゼロ円から始められます。紹介しているツールはすべて無料プランからスタートできます。収益が出てから有料プランに切り替えることをおすすめします。</div>
         </div>
         <div class="faq-item">
-          <div class="faq-q">Q. 副業がバレることはありますか？</div>
-          <div class="faq-a">A. 確定申告や住民税の処理を適切に行えば、会社にバレる可能性を最小限にできます。詳しくはLINE登録後の配信でご説明します。</div>
+          <button class="faq-q" onclick="toggleFaq(this)">
+            <span>Q. 副業がバレることはありますか？</span>
+            <span class="faq-arrow">▼</span>
+          </button>
+          <div class="faq-a">確定申告や住民税の処理を適切に行えば、会社にバレる可能性を最小限にできます。詳しくはLINE登録後の配信でご説明します。</div>
         </div>
         <div class="faq-item">
-          <div class="faq-q">Q. 忙しくて作業時間が取れないのですが…</div>
-          <div class="faq-a">A. 自動化がこのサイトのテーマです。一度仕組みを作れば、作業時間は最小限になります。最初のセットアップは週末の数時間で完了します。</div>
+          <button class="faq-q" onclick="toggleFaq(this)">
+            <span>Q. 忙しくて作業時間が取れないのですが…</span>
+            <span class="faq-arrow">▼</span>
+          </button>
+          <div class="faq-a">自動化がこのサイトのテーマです。一度仕組みを作れば、作業時間は最小限になります。最初のセットアップは週末の数時間で完了します。</div>
         </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">
+            <span>Q. スマホだけでもできますか？</span>
+            <span class="faq-arrow">▼</span>
+          </button>
+          <div class="faq-a">多くの方法はスマホだけで始められます。ただし、自動化システムの構築はPCが推奨です。PCがなくてもできるステップから始めることが可能です。</div>
+        </div>
+      </div>
+
+      <!-- FAQ直後のCTA -->
+      <div class="faq-cta">
+        <p>他にご不明な点はLINEで直接お気軽にご質問ください。</p>
+        <a href="https://lin.ee/7TgLoCi" target="_blank" class="btn-line-main">📩 LINEで質問する（無料）</a>
       </div>
     </div>
   </section>
@@ -360,7 +436,7 @@
           <h4>コンテンツ</h4>
           <a href="https://note.com/gaddemukitano" target="_blank">note記事一覧</a>
           <a href="#tools">おすすめツール</a>
-          <a href="#line">LINE登録（無料）</a>
+          <a href="https://lin.ee/7TgLoCi" target="_blank">LINE登録（無料）</a>
         </div>
         <div class="footer-links">
           <h4>規約・ポリシー</h4>
@@ -376,5 +452,6 @@
     </div>
   </footer>
 
+  <script src="script.js"></script>
 </body>
 </html>
